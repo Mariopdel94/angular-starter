@@ -1,0 +1,30 @@
+/* Responsiveness helpers */
+@mixin resolutions-above($resolution) {
+  @media screen and (min-width: $resolution) {
+    @content;
+  }
+}
+
+@mixin resolutions-below($resolution) {
+  @media screen and (max-width: $resolution) {
+    @content;
+  }
+}
+
+@mixin resolutions-between($min, $max) {
+  @media screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin screen-portrait {
+  @media screen and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin screen-landscape {
+  @media screen and (orientation: landscape) {
+    @content;
+  }
+}

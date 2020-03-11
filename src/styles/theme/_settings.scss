@@ -1,0 +1,33 @@
+/* The project prefix is used for several classes such as buttons. Example: 'eve-btn-primary'*/
+$project-prefix: 'eva';
+
+$resolution-small: 0px;
+$resolution-medium: 768px;
+$resolution-large: 992px;
+$resolution-xlarge: 1200px;
+$resolution-xxlarge: 1440px;
+
+$color-map: (
+  primary: #004977,
+  secondary: #0d74af,
+  tertiary: #009688,
+  accent: #1590d6,
+  success: #43a047,
+  warning: #ffc107,
+  danger: #d03027,
+  info: #3f51b5,
+  neutral: #333333
+);
+
+$text-weights: (
+  thin: 100,
+  extra-light: 200,
+  light: 300,
+  regular: 400,
+  normal: 400,
+  medium: 500,
+  semi-bold: 600,
+  semibold: 600,
+  bold: 700,
+  extra-bold: 800
+);

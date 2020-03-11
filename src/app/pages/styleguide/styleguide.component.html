@@ -1,0 +1,364 @@
+<main class="styleguide-container">
+  <div class="grid-container">
+    <div class="padding-y">
+      <div class="card margin-y">
+        <div class="card-title">
+          Colors
+        </div>
+        <div class="card-subtitle">
+          Color palette
+        </div>
+        <div class="card-content">
+          The color palette consists in the following colors and variations.
+          When the bg-color is used, the contrast it is calculated
+          automatically. You can add or remove colors as you wish. You need to
+          provide only the base color and the variations will be calculated
+          automatically.
+
+          <pre>
+&lt;div class="bg-{{ '{' + '{ color }' + '}' }}-{{
+              '{' + '{ variation }' + '}'
+            }}"&gt;&lt;/div&gt;</pre
+          >
+
+          <div>
+            <div class="grid-x medium-margin-y">
+              <div class="bold cell small-12">
+                Primary
+              </div>
+              <div class="cell small-2 color-example bg-primary-lighter">
+                lighter
+              </div>
+              <div class="cell small-2 color-example bg-primary-light">
+                light
+              </div>
+              <div class="cell small-2 color-example bg-primary-base">
+                base
+              </div>
+              <div class="cell small-2 color-example bg-primary-dark">
+                dark
+              </div>
+              <div class="cell small-2 color-example bg-primary-darker">
+                darker
+              </div>
+              <div class="cell small-2 color-example bg-primary-trans">
+                trans
+              </div>
+            </div>
+            <div class="grid-x medium-margin-y">
+              <div class="bold cell small-12">
+                Secondary
+              </div>
+              <div class="cell small-2 color-example bg-secondary-lighter">
+                lighter
+              </div>
+              <div class="cell small-2 color-example bg-secondary-light">
+                light
+              </div>
+              <div class="cell small-2 color-example bg-secondary-base">
+                base
+              </div>
+              <div class="cell small-2 color-example bg-secondary-dark">
+                dark
+              </div>
+              <div class="cell small-2 color-example bg-secondary-darker">
+                darker
+              </div>
+              <div class="cell small-2 color-example bg-secondary-trans">
+                trans
+              </div>
+            </div>
+            <div class="grid-x medium-margin-y">
+              <div class="bold cell small-12">
+                Tertiary
+              </div>
+              <div class="cell small-2 color-example bg-tertiary-lighter">
+                lighter
+              </div>
+              <div class="cell small-2 color-example bg-tertiary-light">
+                light
+              </div>
+              <div class="cell small-2 color-example bg-tertiary-base">
+                base
+              </div>
+              <div class="cell small-2 color-example bg-tertiary-dark">
+                dark
+              </div>
+              <div class="cell small-2 color-example bg-tertiary-darker">
+                darker
+              </div>
+              <div class="cell small-2 color-example bg-tertiary-trans">
+                trans
+              </div>
+            </div>
+            <div class="grid-x medium-margin-y">
+              <div class="bold cell small-12">
+                Accent
+              </div>
+              <div class="cell small-2 color-example bg-accent-lighter">
+                lighter
+              </div>
+              <div class="cell small-2 color-example bg-accent-light">
+                light
+              </div>
+              <div class="cell small-2 color-example bg-accent-base">
+                base
+              </div>
+              <div class="cell small-2 color-example bg-accent-dark">
+                dark
+              </div>
+              <div class="cell small-2 color-example bg-accent-darker">
+                darker
+              </div>
+              <div class="cell small-2 color-example bg-accent-trans">
+                trans
+              </div>
+            </div>
+            <div class="grid-x medium-margin-y">
+              <div class="bold cell small-12">
+                Success
+              </div>
+              <div class="cell small-2 color-example bg-success-lighter">
+                lighter
+              </div>
+              <div class="cell small-2 color-example bg-success-light">
+                light
+              </div>
+              <div class="cell small-2 color-example bg-success-base">
+                base
+              </div>
+              <div class="cell small-2 color-example bg-success-dark">
+                dark
+              </div>
+              <div class="cell small-2 color-example bg-success-darker">
+                darker
+              </div>
+              <div class="cell small-2 color-example bg-success-trans">
+                trans
+              </div>
+            </div>
+            <div class="grid-x medium-margin-y">
+              <div class="bold cell small-12">
+                Warning
+              </div>
+              <div class="cell small-2 color-example bg-warning-lighter">
+                lighter
+              </div>
+              <div class="cell small-2 color-example bg-warning-light">
+                light
+              </div>
+              <div class="cell small-2 color-example bg-warning-base">base</div>
+              <div class="cell small-2 color-example bg-warning-dark">dark</div>
+              <div class="cell small-2 color-example bg-warning-darker">
+                darker
+              </div>
+              <div class="cell small-2 color-example bg-warning-trans">
+                trans
+              </div>
+            </div>
+            <div class="grid-x medium-margin-y">
+              <div class="bold cell small-12">
+                Danger
+              </div>
+              <div class="cell small-2 color-example bg-danger-lighter">
+                lighter
+              </div>
+              <div class="cell small-2 color-example bg-danger-light">
+                light
+              </div>
+              <div class="cell small-2 color-example bg-danger-base">
+                base
+              </div>
+              <div class="cell small-2 color-example bg-danger-dark">
+                dark
+              </div>
+              <div class="cell small-2 color-example bg-danger-darker">
+                darker
+              </div>
+              <div class="cell small-2 color-example bg-danger-trans">
+                trans
+              </div>
+            </div>
+            <div class="grid-x medium-margin-y">
+              <div class="bold cell small-12">
+                Info
+              </div>
+              <div class="cell small-2 color-example bg-info-lighter">
+                lighter
+              </div>
+              <div class="cell small-2 color-example bg-info-light">light</div>
+              <div class="cell small-2 color-example bg-info-base">
+                base
+              </div>
+              <div class="cell small-2 color-example bg-info-dark">
+                dark
+              </div>
+              <div class="cell small-2 color-example bg-info-darker">
+                darker
+              </div>
+              <div class="cell small-2 color-example bg-info-trans">trans</div>
+            </div>
+            <div class="grid-x medium-margin-y">
+              <div class="bold cell small-12">
+                Neutral
+              </div>
+              <div class="cell small-2 color-example bg-neutral-lighter">
+                lighter
+              </div>
+              <div class="cell small-2 color-example bg-neutral-light">
+                light
+              </div>
+              <div class="cell small-2 color-example bg-neutral-base">
+                base
+              </div>
+              <div class="cell small-2 color-example bg-neutral-dark">
+                dark
+              </div>
+              <div class="cell small-2 color-example bg-neutral-darker">
+                darker
+              </div>
+              <div class="cell small-2 color-example bg-neutral-trans">
+                trans
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card margin-y">
+        <div class="card-title">
+          Filled Buttons
+        </div>
+        <div class="card-subtitle">
+          EVA buttons classes
+        </div>
+        <div class="card-content">
+          The following are the EVA buttons classes available in the project.
+          The buttons are pulled from the color palette and will create a button
+          for each color.
+
+          <div class="buttons-examples-container grid-margin-x">
+            <button class="shrink cell eva-btn eva-btn-default">
+              <span>EVA button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-primary">
+              <span>Primary button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-secondary">
+              <span>Secondary button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-tertiary">
+              <span>Tertiary button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-accent">
+              <span>Accent button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-success">
+              <span>Success button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-warning">
+              <span>Warning button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-danger">
+              <span>Danger button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-info">
+              <span>Info button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-neutral">
+              <span>Neutral button</span>
+            </button>
+            <button class="shrink cell eva-btn" disabled>
+              <span>Disabled button</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card margin-y">
+        <div class="card-title">
+          Outline Buttons
+        </div>
+        <div class="card-subtitle">
+          EVA buttons classes
+        </div>
+        <div class="card-content">
+          The following are the EVA buttons classes available in the project.
+
+          <div class="buttons-examples-container grid-margin-x">
+            <button class="shrink cell eva-btn eva-btn-default">
+              <span>EVA button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-outline-primary">
+              <span>Primary button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-outline-secondary">
+              <span>Secondary button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-outline-tertiary">
+              <span>Tertiary button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-outline-accent">
+              <span>Accent button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-outline-success">
+              <span>Success button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-outline-warning">
+              <span>Warning button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-outline-danger">
+              <span>Danger button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-outline-info">
+              <span>Info button</span>
+            </button>
+            <button class="shrink cell eva-btn eva-btn-outline-neutral">
+              <span>Neutral button</span>
+            </button>
+            <button class="shrink cell eva-btn" disabled>
+              <span>Disabled button</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card margin-y">
+        <div class="card-title">
+          Forms
+        </div>
+        <div class="card-subtitle">
+          Input and textarea exaple with error validation.
+        </div>
+        <div class="card-content">
+          <form class="grid-x grid-margin-y" #exampleForm="ngForm">
+            <div class="cell small-12">
+              <label>Input example</label>
+              <input
+                required
+                type="email"
+                pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+                placeholder="email@email.com"
+                [(ngModel)]="email"
+                name="email"
+                class="mb-3"
+              />
+            </div>
+            <div class="cell small-12">
+              <label>Textarea example</label>
+              <textarea
+                required
+                [(ngModel)]="textareaField"
+                name="textareaField"
+                cols="30"
+                grid-x
+                grid-margin-xs="10"
+                class="mb-3"
+              ></textarea>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

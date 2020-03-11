@@ -1,0 +1,62 @@
+@import './colors';
+
+label {
+  font-size: 0.9rem;
+  line-height: 1;
+  font-weight: 600;
+  color: color(neutral, lighter);
+}
+
+input,
+textarea {
+  background-color: #f2f2f2;
+  border: none;
+  border-bottom: 2px solid color(neutral, lighter);
+  border-radius: 0.2rem;
+  box-shadow: none;
+  color: color(neutral, base);
+  font-size: 1rem;
+  min-height: 2.75rem;
+  outline: none;
+  padding: 0 1rem 0 0.5rem;
+  transition: all 0.3s ease;
+  width: 100%;
+
+  &::placeholder {
+    color: color(neutral, trans);
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+
+  &:active {
+    border-bottom: 2px solid color(neutral, lighter);
+  }
+
+  &:focus {
+    border-bottom: 2px solid color(primary, base);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &.ng-touched.ng-invalid {
+    background-color: color(danger, base) !important;
+    border-color: transparent !important;
+    color: color(light) !important;
+
+    &::placeholder {
+      color: color(danger, lighter);
+    }
+  }
+}
+
+textarea {
+  height: 8rem;
+  padding: 1rem;
+  resize: vertical;
+}

@@ -1,0 +1,25 @@
+.styleguide-container {
+  background-color: #f5f5f5;
+}
+
+pre {
+  background-color: #333333;
+  color: white;
+  padding: 0.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
+.color-example {
+  padding: 0.5rem 1rem;
+}
+
+.buttons-examples-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .eva-btn {
+    margin-top: 0.75rem;
+  }
+}

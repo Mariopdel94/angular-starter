@@ -1,0 +1,32 @@
+@import './settings';
+
+.italic {
+  font-style: italic;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+@each $key, $weight in $text-weights {
+  .text-#{$key},
+  .#{$key} {
+    font-weight: $weight;
+  }
+}

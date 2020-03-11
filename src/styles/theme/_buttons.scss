@@ -1,0 +1,57 @@
+@import './colors';
+
+@mixin eva-btn-color($bg-color) {
+  color: color-contrast(color($bg-color, base));
+  background-color: color($bg-color, base);
+  border-color: color($bg-color, base);
+
+  &:hover {
+    background-color: color($bg-color, light);
+    border-color: color($bg-color, light);
+  }
+}
+
+@mixin eva-btn-outline($bg-color) {
+  border-color: color($bg-color, base);
+  color: color($bg-color, base);
+
+  &:hover {
+    background-color: color($bg-color, base);
+    color: color-contrast(color($bg-color, base));
+  }
+}
+
+.eva-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+  outline: none;
+
+  &.eva-btn-default {
+    border-color: color(neutral, base);
+  }
+
+  :not(:first-child) {
+    margin-left: 0.25rem;
+  }
+
+  &:disabled {
+    background-color: color(neutral, trans);
+    cursor: not-allowed;
+  }
+
+  @each $key, $color in $color-map {
+    &.eva-btn-#{$key} {
+      @include eva-btn-color($key);
+    }
+
+    &.eva-btn-outline-#{$key} {
+      @include eva-btn-outline($key);
+    }
+  }
+}

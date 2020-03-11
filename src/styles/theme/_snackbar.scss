@@ -1,0 +1,49 @@
+@import './responsive';
+
+/* Material snackbar styles */
+.cdk-overlay-pane {
+  .mat-snack-bar-container {
+    background-color: color(primary, base);
+    border-radius: 2px;
+    bottom: 2rem !important;
+    box-shadow: none;
+    color: white;
+    font-size: 1rem;
+    min-width: 0;
+    padding: 0;
+    position: absolute !important;
+    right: 1rem !important;
+    transition: all 0.25s ease;
+    margin: 0 !important;
+    max-width: none !important;
+
+    @include resolutions-above($resolution-large) {
+      bottom: 3rem !important;
+      width: auto;
+    }
+
+    @include resolutions-between($resolution-medium, $resolution-large) {
+      max-width: 66vw;
+    }
+
+    &.success {
+      background-color: color(success, base);
+    }
+
+    &.warning {
+      background-color: color(warning, base);
+    }
+
+    &.danger {
+      background-color: color(danger, base);
+    }
+  }
+
+  .mat-simple-snackbar-action {
+    color: white;
+  }
+
+  &.mat-snack-bar-handset .mat-snack-bar-container {
+    margin: 0 !important;
+  }
+}
