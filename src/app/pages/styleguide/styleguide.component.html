@@ -1,6 +1,7 @@
 <main class="styleguide-container">
   <div class="grid-container">
     <div class="padding-y">
+      <h1>Eva</h1>
       <div class="card margin-y">
         <div class="card-title">
           Colors
@@ -10,19 +11,21 @@
         </div>
         <div class="card-content">
           <p>
-            The color palette can be configured in the settings file.
-            You can add or remove keys on the color map as you wish, you need to
-            provide only the base color and the variations will be calculated
+            The color palette can be configured in the settings file. You can
+            add or remove keys on the color map as you wish, you need to provide
+            only the base color and the variations will be calculated
             automatically.
           </p>
           <p>
             When the bg-color is used, the contrast it is calculated
             automatically based on the W3 document:
-            <a target="_blank" href="http://www.w3.org/TR/AERT#color-contrast">http://www.w3.org/TR/AERT#color-contrast</a>
+            <a target="_blank" href="http://www.w3.org/TR/AERT#color-contrast">
+              http://www.w3.org/TR/AERT#color-contrast
+            </a>
           </p>
           <p>
-            Color brightness is determined by the following formula:
-            ((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
+            Color brightness is determined by the following formula: ((Red value
+            X 299) + (Green value X 587) + (Blue value X 114)) / 1000
           </p>
           <pre>
 &lt;div class="bg-{{ '{' + '{ color }' + '}' }}-{{
