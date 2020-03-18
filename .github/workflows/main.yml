@@ -24,4 +24,4 @@ jobs:
           ftp-server: mariopineda.com.mx
           ftp-username: mariopdel94
           ftp-password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./public_html/eva.mariopineda.com.mx/
+          local-dir: public_html/eva.mariopineda.com.mx/
