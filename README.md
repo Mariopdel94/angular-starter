@@ -45,3 +45,7 @@ VSCode is recommended as the IDE for this project, included in this repo is `.vs
 ## Development Server
 
 Run `npm start` for a dev server and navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## [Buddy](https://app.buddy.works/)
+
+The project has an automatic pipeline for continuous integration in Buddy.
