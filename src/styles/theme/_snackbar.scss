@@ -17,12 +17,12 @@
     margin: 0 !important;
     max-width: none !important;
 
-    @include resolutions-above($resolution-large) {
+    @include resolutions-above(resolution(large)) {
       bottom: 3rem !important;
       width: auto;
     }
 
-    @include resolutions-between($resolution-medium, $resolution-large) {
+    @include resolutions-between(resolution(medium), resolution(large)) {
       max-width: 66vw;
     }
 

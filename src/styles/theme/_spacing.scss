@@ -1,4 +1,5 @@
-/** Margin */
+@import './settings';
+
 .margin-auto {
   margin: auto !important;
 }
@@ -7,91 +8,54 @@
   margin: 0 !important;
 }
 
-.small-margin-x {
-  margin-left: 0.25rem !important;
-  margin-right: 0.25rem !important;
-}
-
-.small-margin-y {
-  margin-bottom: 0.25rem !important;
-  margin-top: 0.25rem !important;
-}
-
-.margin-x {
-  margin-left: 1rem !important;
-  margin-right: 1rem !important;
-}
-
-.margin-y {
-  margin-bottom: 1rem !important;
-  margin-top: 1rem !important;
-}
-
-.medium-margin-x {
-  margin-left: 0.5rem !important;
-  margin-right: 0.5rem !important;
-}
-
-.medium-margin-y {
-  margin-bottom: 0.5rem !important;
-  margin-top: 0.5rem !important;
-}
-
-.large-margin-x {
-  margin-left: 1.5rem !important;
-  margin-right: 1.5rem !important;
-}
-
-.large-margin-y {
-  margin-bottom: 1.5rem !important;
-  margin-top: 1.5rem !important;
-}
-
-/** Padding */
-.small-padding-x {
-  padding-left: 0.25rem !important;
-  padding-right: 0.25rem !important;
-}
-
-.small-padding-y {
-  padding-bottom: 0.25rem !important;
-  padding-top: 0.25rem !important;
-}
-
-.padding-x {
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
-}
-
-.padding-y {
-  padding-bottom: 1rem !important;
-  padding-top: 1rem !important;
-}
-
-.medium-padding-x {
-  padding-left: 0.5rem !important;
-  padding-right: 0.5rem !important;
-}
-
-.medium-padding-y {
-  padding-bottom: 0.5rem !important;
-  padding-top: 0.5rem !important;
-}
-
-.large-padding-x {
-  padding-left: 1.5rem !important;
-  padding-right: 1.5rem !important;
-}
-
-.large-padding-y {
-  padding-bottom: 1.5rem !important;
-  padding-top: 1.5rem !important;
-}
-
 .full-width {
   width: 100% !important;
 }
 
 .full-height {
   height: 100% !important;
+}
+
+@each $key, $space in $spacers {
+  .#{$key}-margin-x {
+    margin-left: $space !important;
+    margin-right: $space !important;
+  }
+
+  .#{$key}-margin-y {
+    margin-top: $space !important;
+    margin-bottom: $space !important;
+  }
+
+  .#{$key}-padding-x {
+    padding-left: $space !important;
+    padding-right: $space !important;
+  }
+
+  .#{$key}-padding-y {
+    padding-top: $space !important;
+    padding-bottom: $space !important;
+  }
+
+  @if $key == default {
+    .margin-x {
+      margin-left: $space !important;
+      margin-right: $space !important;
+    }
+
+    .margin-y {
+      margin-top: $space !important;
+      margin-bottom: $space !important;
+    }
+
+    .padding-x {
+      padding-left: $space !important;
+      padding-right: $space !important;
+    }
+
+    .padding-y {
+      padding-top: $space !important;
+      padding-bottom: $space !important;
+    }
+  }
 }

@@ -250,7 +250,7 @@
           for each color.
 
           <pre>
-&lt;button class="eva-btn eva-btn{{
+&lt;button class="eva-btn eva-btn-{{
               '{' + '{ color }' + '}'
             }}&gt;&lt;&#8725;button&gt;</pre
           >
@@ -405,7 +405,7 @@
           Use these mixins under any SCSS rule and use your own rules.
 
           <pre>
-.some-class &#123; padding: 0.5rem; @include resolutions-above($resolution-large) &#123; padding: 1rem &#125;&#125;;</pre
+.some-class &#123; padding: 0.5rem; @include resolutions-above(resolution(large)) &#123; padding: 1rem &#125;&#125;;</pre
           >
         </div>
       </div>

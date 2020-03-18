@@ -1,3 +1,10 @@
+@import './settings';
+
+/* Resolution function to use when creating a media query */
+@function resolution($breakpoint-size) {
+  @return map-get($resolution-breakpoints, $breakpoint-size);
+}
+
 /* Responsiveness helpers */
 @mixin resolutions-above($resolution) {
   @media screen and (min-width: $resolution) {

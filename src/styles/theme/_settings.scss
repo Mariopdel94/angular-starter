@@ -3,12 +3,7 @@ $project-prefix: 'eva';
 $title-font: 'Montserrat', sans-serif;
 $content-font: 'Open Sans', sans-serif;
 
-$resolution-small: 0px;
-$resolution-medium: 768px;
-$resolution-large: 992px;
-$resolution-xlarge: 1200px;
-$resolution-xxlarge: 1440px;
-
+/* Each color creates different variations, and different classes for color, and background */
 $color-map: (
   primary: #004977,
   secondary: #0d74af,
@@ -21,6 +16,24 @@ $color-map: (
   neutral: #333333
 );
 
+/* Each breakpoint is used for media queries mixins */
+$resolution-breakpoints: (
+  small: 0px,
+  medium: 768px,
+  large: 992px,
+  xlarge: 1200px,
+  xxlarge: 1440px
+);
+
+/* Each spacer is used for margin and padding spacing classes */
+$spacers: (
+  small: 0.25rem,
+  medium: 0.5rem,
+  default: 1rem,
+  large: 1.5rem
+);
+
+/* Each text weight creates a class named the same as the key */
 $text-weights: (
   thin: 100,
   extra-light: 200,
