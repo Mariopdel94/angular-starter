@@ -18,13 +18,6 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm run build
-      - name: List output files
-        run: |
-          ls
-          cd dist/
-          ls
-          cd angular-starter/
-          ls
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
         with:
