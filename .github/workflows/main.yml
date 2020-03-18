@@ -9,17 +9,6 @@ on:
     branches: [master]
 
 jobs:
-  build:
-    name: Build App
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-      - run: npm ci
-      - run: npm run build
-
   FTP-Deploy-Action:
     needs: build
     name: FTP-Deploy-Action
@@ -28,6 +17,11 @@ jobs:
       - uses: actions/checkout@master
         with:
           fetch-depth: 2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm run build
       - name: List output files
         run: ls
       - name: FTP-Deploy-Action
