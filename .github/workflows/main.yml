@@ -28,7 +28,7 @@ jobs:
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.0.0
         with:
-          ftp-server: ${{ secrets.FTP_SERVER }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-server: mariopineda.com.mx
+          ftp-username: mariopdel94
           ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./public_html/eva.mariopineda.com.mx/
