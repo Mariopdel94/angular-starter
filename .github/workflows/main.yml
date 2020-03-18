@@ -2,12 +2,12 @@
 
 name: Publish Website
 
-# Controls when the action will run. Triggers the workflow on push or pull request 
+# Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
-    
+    branches: [master]
+
 jobs:
   build:
     name: Build App
@@ -17,20 +17,21 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+      - run: npm ci
       - run: npm run build
-    
+
   FTP-Deploy-Action:
     needs: build
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
-      with:
-        fetch-depth: 2
-    - name: FTP-Deploy-Action
-      uses: SamKirkland/FTP-Deploy-Action@3.0.0
-      with:
-        ftp-server: ${{ secrets.FTP_SERVER }}
-        ftp-username: ${{ secrets.FTP_USERNAME }}
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ${{ secrets.FTP_DIR }}
+      - uses: actions/checkout@master
+        with:
+          fetch-depth: 2
+      - name: FTP-Deploy-Action
+        uses: SamKirkland/FTP-Deploy-Action@3.0.0
+        with:
+          ftp-server: ${{ secrets.FTP_SERVER }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ${{ secrets.FTP_DIR }}
