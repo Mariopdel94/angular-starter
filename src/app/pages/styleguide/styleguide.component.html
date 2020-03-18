@@ -385,6 +385,30 @@
           </form>
         </div>
       </div>
+
+      <div class="card margin-y">
+        <div class="card-title">
+          Responsive Layout
+        </div>
+        <div class="card-subtitle">
+          Easy media queries and customizable breakpoints.
+        </div>
+        <div class="card-content">
+          EVA provides three different mixins with responsive media queries:
+
+          <ul>
+            <li>resolutions-above($resolution)</li>
+            <li>resolutions-below($resolution)</li>
+            <li>resolutions-between($min, $max)</li>
+          </ul>
+
+          Use these mixins under any SCSS rule and use your own rules.
+
+          <pre>
+.some-class &#123; padding: 0.5rem; @include resolutions-above($resolution-large) &#123; padding: 1rem &#125;&#125;;</pre
+          >
+        </div>
+      </div>
     </div>
   </div>
 </main>
