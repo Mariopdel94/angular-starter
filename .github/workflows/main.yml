@@ -10,7 +10,6 @@ on:
 
 jobs:
   FTP-Deploy-Action:
-    needs: build
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
