@@ -1,27 +1,47 @@
-# AngularStarter
+# Angular Starter - EVA
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.
+Starter Angular Project with Zurb Foundation Grid and Angular Material components.
 
-## Development server
+Theming is supported by changing the `settings.csss` file under `theme`. In there you can add your color palette, fonts, resolution breakpoints for easier media queries in your css rules in your project.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`bg-${color}-${variation}` classes are generated automatically and the contrasting text color assigned based on the [W3 color documentation guide](http://www.webmasterworld.com/r.cgi?f=88&d=9769&url=http://www.w3.org/TR/AERT#color-contrast) using the following formula:
+
+```
+((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
+```
+
+## Prettier
+
+Prettier is used to automatically style code, files can be pretified automatically on save by using the included `.vscode/settings.json` file in this repo.
+
+Additionally, the prettier npm module is included as a dependency to prettify staged files with a `pre-commit` hook.
+
+Prettier is used on this project to ensure **consistent coding style**.
+
+## TSLint
+
+Similarly to Prettier, TSLint will try to auto-fix linting issues automatically on save using the included `.vscode/settings.json` file.
+
+Running `npm run lint:fix` will also try to auto-fix any linting issues in the project.
+
+There's a `pre-push` hook that will lint the project and prevent pushing if errors are present.
 
 ## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Hooks are ran using Husky to ensure code quality through the scaffolding of this project.
 
-## Build
+### pre-commit
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Prettier will run as a `pre-commit` hook using `pretty-quick` on staged files.
 
-## Running unit tests
+### pre-push
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Linting (no auto-fix) and tests will be run as a `pre-push` hook, if either of them fail pushing won't go through.
 
-## Running end-to-end tests
+## IDE - VSCode
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+VSCode is recommended as the IDE for this project, included in this repo is `.vscode/settings.json` file with some basic settings to prettify and attempt to auto-fix lint issues with ease.
 
-## Further help
+## Development Server
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run `npm start` for a dev server and navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
