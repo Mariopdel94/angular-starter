@@ -9,12 +9,21 @@
           Color palette
         </div>
         <div class="card-content">
-          The color palette consists in the following colors and variations.
-          When the bg-color is used, the contrast it is calculated
-          automatically. You can add or remove colors as you wish. You need to
-          provide only the base color and the variations will be calculated
-          automatically.
-
+          <p>
+            The color palette can be configured in the settings file.
+            You can add or remove keys on the color map as you wish, you need to
+            provide only the base color and the variations will be calculated
+            automatically.
+          </p>
+          <p>
+            When the bg-color is used, the contrast it is calculated
+            automatically based on the W3 document:
+            <a target="_blank" href="http://www.w3.org/TR/AERT#color-contrast">http://www.w3.org/TR/AERT#color-contrast</a>
+          </p>
+          <p>
+            Color brightness is determined by the following formula:
+            ((Red value X 299) + (Green value X 587) + (Blue value X 114)) / 1000
+          </p>
           <pre>
 &lt;div class="bg-{{ '{' + '{ color }' + '}' }}-{{
               '{' + '{ variation }' + '}'
