@@ -24,6 +24,22 @@
   text-align: left !important;
 }
 
+* {
+  font-family: $content-font;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.eva-title,
+.eva-subtitle {
+  font-family: $title-font;
+}
+
+
 @each $key, $weight in $text-weights {
   .text-#{$key},
   .#{$key} {
