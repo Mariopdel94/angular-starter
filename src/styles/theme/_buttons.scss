@@ -21,7 +21,8 @@
   }
 }
 
-.#{$project-prefix}-btn {
+.#{$project-prefix}-btn,
+.#{$project-prefix}-button {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   display: flex;
@@ -32,7 +33,8 @@
   cursor: pointer;
   outline: none;
 
-  &.#{$project-prefix}-btn-default {
+  &.#{$project-prefix}-btn-default,
+  &.#{$project-prefix}-button-default {
     border-color: color(neutral, base);
   }
 
@@ -46,11 +48,13 @@
   }
 
   @each $key, $color in $color-map {
-    &.#{$project-prefix}-btn-#{$key} {
+    &.#{$project-prefix}-btn-#{$key},
+    &.#{$project-prefix}-button-#{$key} {
       @include btn-color($key);
     }
 
-    &.#{$project-prefix}-btn-outline-#{$key} {
+    &.#{$project-prefix}-btn-outline-#{$key},
+    &.#{$project-prefix}-button-outline-#{$key} {
       @include btn-outline($key);
     }
   }
