@@ -9,7 +9,18 @@ on:
     branches: [ master ]
     
 jobs:
+  build:
+    name: Build App
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm run build
+    
   FTP-Deploy-Action:
+    needs: build
     name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
