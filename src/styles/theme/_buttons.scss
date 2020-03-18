@@ -1,6 +1,6 @@
 @import './colors';
 
-@mixin eva-btn-color($bg-color) {
+@mixin btn-color($bg-color) {
   color: color-contrast(color($bg-color, base));
   background-color: color($bg-color, base);
   border-color: color($bg-color, base);
@@ -11,7 +11,7 @@
   }
 }
 
-@mixin eva-btn-outline($bg-color) {
+@mixin btn-outline($bg-color) {
   border-color: color($bg-color, base);
   color: color($bg-color, base);
 
@@ -21,7 +21,7 @@
   }
 }
 
-.eva-btn {
+.#{$project-prefix}-btn {
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   display: flex;
@@ -32,7 +32,7 @@
   cursor: pointer;
   outline: none;
 
-  &.eva-btn-default {
+  &.#{$project-prefix}-btn-default {
     border-color: color(neutral, base);
   }
 
@@ -46,12 +46,12 @@
   }
 
   @each $key, $color in $color-map {
-    &.eva-btn-#{$key} {
-      @include eva-btn-color($key);
+    &.#{$project-prefix}-btn-#{$key} {
+      @include btn-color($key);
     }
 
-    &.eva-btn-outline-#{$key} {
-      @include eva-btn-outline($key);
+    &.#{$project-prefix}-btn-outline-#{$key} {
+      @include btn-outline($key);
     }
   }
 

@@ -34,11 +34,10 @@ h3,
 h4,
 h5,
 h6,
-.eva-title,
-.eva-subtitle {
+.#{$project-prefix}-title,
+.#{$project-prefix}-subtitle {
   font-family: $title-font;
 }
-
 
 @each $key, $weight in $text-weights {
   .text-#{$key},
