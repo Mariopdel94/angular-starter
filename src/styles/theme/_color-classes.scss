@@ -1,0 +1,22 @@
+/* Generate all the color classes (see css file output) */
+@each $code, $color in $colors {
+  @if type-of($color) == 'map' {
+    @each $colorVariant, $colorCode in $color {
+      .color-#{$code}-#{$colorVariant} {
+        color: map-get($color, $colorVariant);
+      }
+      .bg-#{$code}-#{$colorVariant} {
+        background-color: map-get($color, $colorVariant);
+        color: color-contrast(map-get($color, $colorVariant));
+      }
+    }
+  } @else {
+    .color-#{$code} {
+      color: $color;
+    }
+    .bg-#{$code} {
+      background-color: $color;
+      color: color-contrast($color);
+    }
+  }
+}

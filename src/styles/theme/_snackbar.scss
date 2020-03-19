@@ -4,43 +4,54 @@
 .cdk-overlay-pane {
   .mat-snack-bar-container {
     background-color: color(primary, base);
-    border-radius: 2px;
+    color: color-contrast(color(primary, base));
     bottom: 2rem !important;
     box-shadow: none;
-    color: white;
     font-size: 1rem;
-    min-width: 0;
-    padding: 0;
-    position: absolute !important;
-    right: 1rem !important;
+    padding: 1rem;
+    border-radius: 0.15rem;
+    position: fixed !important;
+    left: 1rem;
+    right: 1rem;
     transition: all 0.25s ease;
-    margin: 0 !important;
-    max-width: none !important;
+    max-width: calc(100% - 2rem) !important;
 
-    @include resolutions-above(resolution(large)) {
-      bottom: 3rem !important;
-      width: auto;
+    @include resolutions-above(resolution(medium)) {
+      max-width: 0 !important;
+      left: unset;
     }
 
     @include resolutions-between(resolution(medium), resolution(large)) {
       max-width: 66vw;
     }
 
-    &.success {
+    button {
+      background-color: color(primary, base);
+      color: color-contrast(color(primary, base));
+    }
+
+    &.success,
+    &.success button {
       background-color: color(success, base);
+      color: color-contrast(color(success, base));
     }
 
-    &.warning {
+    &.warning,
+    &.warning button {
       background-color: color(warning, base);
+      color: color-contrast(color(warning, base));
     }
 
-    &.danger {
+    &.danger,
+    &.danger button {
       background-color: color(danger, base);
+      color: color-contrast(color(danger, base));
     }
   }
 
   .mat-simple-snackbar-action {
-    color: white;
+    font-weight: bold;
+    cursor: pointer;
   }
 
   &.mat-snack-bar-handset .mat-snack-bar-container {
