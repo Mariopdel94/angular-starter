@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { StyleguideComponent } from './styleguide.component';
 import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { StyleguideComponent } from './styleguide.component';
 
 describe('StyleguideComponent', () => {
   let component: StyleguideComponent;
@@ -9,7 +9,7 @@ describe('StyleguideComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule],
+      imports: [FormsModule, MatSnackBarModule],
       declarations: [StyleguideComponent]
     }).compileComponents();
   }));

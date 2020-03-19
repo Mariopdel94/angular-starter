@@ -28,6 +28,16 @@ $obligatory-colors: (
 
 $colors: map-merge($colors, $obligatory-colors);
 
+/* Color function to use on other scss files */
+@function color($color-name, $color-variant: null) {
+  @if ($color-variant == null) {
+    @return map-get($colors, $color-name);
+  }
+  @if (map-get($colors, $color-name) != null) {
+    @return map-get(map-get($colors, $color-name), $color-variant);
+  }
+}
+
 /*------------------------
 mixin that calculates if text needs to be light or dark
 depending on the background color passed.
@@ -51,38 +61,5 @@ Color brightness is determined by the following formula:
     @return color(light);
   } @else {
     @return color(neutral, base);
-  }
-}
-
-/* Generate all the color classes (see css file output) */
-@each $code, $color in $colors {
-  @if type-of($color) == 'map' {
-    @each $colorVariant, $colorCode in $color {
-      .color-#{$code}-#{$colorVariant} {
-        color: map-get($color, $colorVariant);
-      }
-      .bg-#{$code}-#{$colorVariant} {
-        background-color: map-get($color, $colorVariant);
-        color: color-contrast(map-get($color, $colorVariant));
-      }
-    }
-  } @else {
-    .color-#{$code} {
-      color: $color;
-    }
-    .bg-#{$code} {
-      background-color: $color;
-      color: color-contrast($color);
-    }
-  }
-}
-
-/* Color function to use on other scss files */
-@function color($color-name, $color-variant: null) {
-  @if ($color-variant == null) {
-    @return map-get($colors, $color-name);
-  }
-  @if (map-get($colors, $color-name) != null) {
-    @return map-get(map-get($colors, $color-name), $color-variant);
   }
 }
