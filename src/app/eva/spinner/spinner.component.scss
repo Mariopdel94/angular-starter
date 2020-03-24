@@ -1,9 +1,10 @@
+@import '../../../styles/theme/index.scss';
+
 .spinner {
   width: 40px;
   height: 40px;
-
   position: relative;
-  margin: 100px auto;
+  margin: 1rem auto;
 }
 
 .double-bounce1,
@@ -11,7 +12,6 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: color(primary, base);
   opacity: 0.4;
   position: absolute;
   top: 0;

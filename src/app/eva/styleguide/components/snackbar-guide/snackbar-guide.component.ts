@@ -22,9 +22,10 @@ export class SnackbarGuideComponent implements OnInit {
     message: string,
     panelClass: keyof typeof SnackbarClasses
   ) {
+    console.log('openSnackbar');
     this._snackBar.open(message, 'Ok', {
       panelClass,
-      duration: 2500,
+      duration: 250000,
     });
   }
 }

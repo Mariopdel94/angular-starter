@@ -10,6 +10,7 @@ import { StyleguideComponent } from './styleguide/styleguide.component';
 import { FormsGuideComponent } from './styleguide/components/forms-guide/forms-guide.component';
 import { ResolutionsGuideComponent } from './styleguide/components/resolutions-guide/resolutions-guide.component';
 import { SnackbarGuideComponent } from './styleguide/components/snackbar-guide/snackbar-guide.component';
+import { SpinnerGuideComponent } from './styleguide/components/spinner-guide/spinner-guide.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { SnackbarGuideComponent } from './styleguide/components/snackbar-guide/s
     FormsGuideComponent,
     ResolutionsGuideComponent,
     SnackbarGuideComponent,
+    SpinnerGuideComponent,
   ],
   imports: [CommonModule, EvaRoutingModule, FormsModule, MatSnackBarModule],
 })
