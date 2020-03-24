@@ -8,6 +8,7 @@ import { ButtonsGuideComponent } from './styleguide/components/buttons-guide/but
 import { ColorGuideComponent } from './styleguide/components/color-guide/color-guide.component';
 import { StyleguideComponent } from './styleguide/styleguide.component';
 import { FormsGuideComponent } from './styleguide/components/forms-guide/forms-guide.component';
+import { ResolutionsGuideComponent } from './styleguide/components/resolutions-guide/resolutions-guide.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,9 @@ import { FormsGuideComponent } from './styleguide/components/forms-guide/forms-g
     StyleguideComponent,
     ColorGuideComponent,
     ButtonsGuideComponent,
-    FormsGuideComponent
+    FormsGuideComponent,
+    ResolutionsGuideComponent,
   ],
-  imports: [CommonModule, EvaRoutingModule, FormsModule, MatSnackBarModule]
+  imports: [CommonModule, EvaRoutingModule, FormsModule, MatSnackBarModule],
 })
 export class EvaModule {}
