@@ -1,0 +1,25 @@
+button {
+  @include btn();
+}
+
+.#{$project-prefix}-btn,
+.#{$project-prefix}-button,
+.#{$project-prefix}-btn-default,
+.#{$project-prefix}-button-default {
+  @include btn();
+  border-color: color(primary, base);
+}
+
+@each $key, $color in $color-map {
+  .#{$project-prefix}-btn-#{$key},
+  .#{$project-prefix}-button-#{$key} {
+    @include btn();
+    @include btn-color($key);
+  }
+
+  .#{$project-prefix}-btn-outline-#{$key},
+  .#{$project-prefix}-button-outline-#{$key} {
+    @include btn();
+    @include btn-outline($key);
+  }
+}
