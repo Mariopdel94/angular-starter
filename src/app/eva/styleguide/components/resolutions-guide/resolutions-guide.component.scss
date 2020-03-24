@@ -1,18 +1,26 @@
 @import '../../../../../styles/theme/theme.scss';
 
 .responsive-layout-example {
-  height: 2rem;
   background-color: color(tertiary, base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: color-contrast(color(tertiary, base));
+  padding: 0.5rem;
+  text-align: center;
 
   @include resolutions-above(medium) {
     background-color: color(secondary, base);
+    color: color-contrast(color(secondary, base));
   }
 
   @include resolutions-above(large) {
     background-color: color(accent, base);
+    color: color-contrast(color(accent, base));
   }
 
   @include resolutions-above(xlarge) {
     background-color: color(primary, base);
+    color: color-contrast(color(primary, base));
   }
 }
