@@ -1,2 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import './styles/theme/theme.scss';
+
+pre {
+  background-color: #333333;
+  color: white;
+  padding: 0.5rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
