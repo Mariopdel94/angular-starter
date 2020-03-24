@@ -1,5 +1,8 @@
-button {
-  @include btn();
+button:disabled {
+  border-radius: 0.25rem !important;
+  background-color: color(neutral, trans);
+  cursor: not-allowed;
+  border: 1px solid transparent;
 }
 
 .#{$project-prefix}-btn,
