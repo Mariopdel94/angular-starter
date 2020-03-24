@@ -5,19 +5,15 @@ enum SnackbarClasses {
   success,
   warning,
   danger,
-  default
+  default,
 }
 
 @Component({
-  selector: 'app-styleguide',
-  templateUrl: './styleguide.component.html',
-  styleUrls: ['./styleguide.component.scss']
+  selector: 'eva-snackbar-guide',
+  templateUrl: './snackbar-guide.component.html',
+  styleUrls: ['./snackbar-guide.component.scss'],
 })
-export class StyleguideComponent implements OnInit {
-  public email = '';
-  public textareaField = '';
-  public selectField = 0;
-
+export class SnackbarGuideComponent implements OnInit {
   constructor(private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {}
@@ -28,7 +24,7 @@ export class StyleguideComponent implements OnInit {
   ) {
     this._snackBar.open(message, 'Ok', {
       panelClass,
-      duration: 2500
+      duration: 2500,
     });
   }
 }

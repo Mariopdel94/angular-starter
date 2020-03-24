@@ -1,5 +1,3 @@
-@import './responsive';
-
 /* Material snackbar styles */
 .cdk-overlay-pane {
   .mat-snack-bar-container {
@@ -16,12 +14,12 @@
     transition: all 0.25s ease;
     max-width: calc(100% - 2rem) !important;
 
-    @include resolutions-above(resolution(medium)) {
+    @include resolutions-above(medium) {
       max-width: 0 !important;
       left: unset;
     }
 
-    @include resolutions-between(resolution(medium), resolution(large)) {
+    @include resolutions-between(medium, large) {
       max-width: 66vw;
     }
 

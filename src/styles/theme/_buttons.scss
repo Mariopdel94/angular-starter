@@ -1,3 +1,24 @@
+@mixin btn() {
+  padding: 0.5rem 1rem !important;
+  border-radius: 0.25rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+  outline: none;
+
+  &:disabled {
+    background-color: color(neutral, trans);
+    cursor: not-allowed;
+  }
+
+  &:active {
+    transform: scale(0.975);
+  }
+}
+
 @mixin btn-color($bg-color) {
   color: color-contrast(color($bg-color, base));
   background-color: color($bg-color, base);
@@ -16,48 +37,5 @@
   &:hover {
     background-color: color($bg-color, base);
     color: color-contrast(color($bg-color, base));
-  }
-}
-
-.#{$project-prefix}-btn,
-.#{$project-prefix}-button {
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  border: 1px solid transparent;
-  cursor: pointer;
-  outline: none;
-
-  &.#{$project-prefix}-btn-default,
-  &.#{$project-prefix}-button-default {
-    border-color: color(neutral, base);
-  }
-
-  :not(:first-child) {
-    margin-left: 0.25rem;
-  }
-
-  &:disabled {
-    background-color: color(neutral, trans);
-    cursor: not-allowed;
-  }
-
-  @each $key, $color in $color-map {
-    &.#{$project-prefix}-btn-#{$key},
-    &.#{$project-prefix}-button-#{$key} {
-      @include btn-color($key);
-    }
-
-    &.#{$project-prefix}-btn-outline-#{$key},
-    &.#{$project-prefix}-button-outline-#{$key} {
-      @include btn-outline($key);
-    }
-  }
-
-  &:active {
-    transform: scale(0.975);
   }
 }
