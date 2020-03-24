@@ -9,6 +9,7 @@ import { ColorGuideComponent } from './styleguide/components/color-guide/color-g
 import { StyleguideComponent } from './styleguide/styleguide.component';
 import { FormsGuideComponent } from './styleguide/components/forms-guide/forms-guide.component';
 import { ResolutionsGuideComponent } from './styleguide/components/resolutions-guide/resolutions-guide.component';
+import { SnackbarGuideComponent } from './styleguide/components/snackbar-guide/snackbar-guide.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ResolutionsGuideComponent } from './styleguide/components/resolutions-g
     ButtonsGuideComponent,
     FormsGuideComponent,
     ResolutionsGuideComponent,
+    SnackbarGuideComponent,
   ],
   imports: [CommonModule, EvaRoutingModule, FormsModule, MatSnackBarModule],
 })

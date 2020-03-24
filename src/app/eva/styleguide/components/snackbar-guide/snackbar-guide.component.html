@@ -1,0 +1,43 @@
+<div class="card margin-y">
+  <div class="card-title">
+    Material Snackbar
+  </div>
+  <div class="card-subtitle">
+    <a href="https://material.angular.io/components/snack-bar/overview">
+      Snackbar - Toast - Alert
+    </a>
+  </div>
+  <div class="card-content">
+    Eva overrides the default Angular Material Snackbar component styles for a
+    better "alert" notification looking component. The usage is the same as the
+    material component, but you have 3 classes out of the box for different
+    alerts.
+
+    <div class="grid-x grid-margin-x">
+      <button
+        (click)="openSnackbar('This is a default snackbar!', 'default')"
+        class="shrink cell eva-btn eva-btn-primary"
+      >
+        Default snackbar
+      </button>
+      <button
+        (click)="openSnackbar('This is a success snackbar!', 'success')"
+        class="shrink cell eva-btn eva-btn-success"
+      >
+        Success snackbar
+      </button>
+      <button
+        (click)="openSnackbar('This is a warning snackbar!', 'warning')"
+        class="shrink cell eva-btn eva-btn-warning"
+      >
+        Warning snackbar
+      </button>
+      <button
+        (click)="openSnackbar('This is a danger snackbar!', 'danger')"
+        class="shrink cell eva-btn eva-btn-danger"
+      >
+        Danger snackbar
+      </button>
+    </div>
+  </div>
+</div>
