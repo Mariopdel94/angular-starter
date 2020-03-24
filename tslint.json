@@ -55,13 +55,6 @@
     "variable-name": {
       "options": ["allow-leading-underscore"]
     },
-    "function-name": [
-      true,
-      {
-        "private-method-regex": "^?[a-z$][wd]+$",
-        "static-method-regex": "^[a-zd]+$"
-      }
-    ],
     "no-else-after-return": false
   },
   "rulesDirectory": ["codelyzer"]
