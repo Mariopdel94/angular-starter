@@ -4,5 +4,6 @@
   "major": {
     "automerge": false
   },
-  "requiredStatusChecks": null
+  "requiredStatusChecks": null,
+  "baseBranches": ["dev"]
 }
