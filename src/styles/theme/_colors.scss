@@ -1,6 +1,4 @@
 /* Variables */
-@import './settings';
-
 $color-shade-amount: 10%;
 $color-shader-amount: 20%;
 $color-trans-amount: 0.5;
@@ -15,15 +13,15 @@ $colors: ();
       lighter: lighten($color, $color-shader-amount),
       dark: darken($color, $color-shade-amount),
       darker: darken($color, $color-shader-amount),
-      trans: transparentize($color, $color-trans-amount)
-    )
+      trans: transparentize($color, $color-trans-amount),
+    ),
   );
   $colors: map-merge($colors, $color-variants);
 }
 
 /* This colors will NOT have a base, light, dark, and trans variants */
 $obligatory-colors: (
-  light: #ffffff
+  light: #ffffff,
 );
 
 $colors: map-merge($colors, $obligatory-colors);
