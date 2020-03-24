@@ -1,0 +1,233 @@
+<div class="card margin-y">
+  <div class="card-title">
+    Colors
+  </div>
+  <div class="card-subtitle">
+    Color palette
+  </div>
+  <div class="card-content">
+    <p>
+      The color palette can be configured in the settings file. You can add or
+      remove keys on the color map as you wish, you need to provide only the
+      base color and the variations will be calculated automatically.
+    </p>
+    <p>
+      When the bg-color is used, the contrast it is calculated automatically
+      based on the W3 document:
+      <a target="_blank" href="http://www.w3.org/TR/AERT#color-contrast">
+        http://www.w3.org/TR/AERT#color-contrast
+      </a>
+    </p>
+    <p>
+      Color brightness is determined by the following formula: ((Red value X
+      299) + (Green value X 587) + (Blue value X 114)) / 1000
+    </p>
+    <pre>
+&lt;div class="bg-{{ '{' + '{ color }' + '}' }}-{{
+        '{' + '{ variation }' + '}'
+      }}"&gt;&lt;&#8725;div&gt;</pre
+    >
+
+    <div>
+      <div class="grid-x medium-margin-y">
+        <div class="bold cell small-12">
+          Primary
+        </div>
+        <div class="cell small-2 color-example bg-primary-lighter">
+          lighter
+        </div>
+        <div class="cell small-2 color-example bg-primary-light">
+          light
+        </div>
+        <div class="cell small-2 color-example bg-primary-base">
+          base
+        </div>
+        <div class="cell small-2 color-example bg-primary-dark">
+          dark
+        </div>
+        <div class="cell small-2 color-example bg-primary-darker">
+          darker
+        </div>
+        <div class="cell small-2 color-example bg-primary-trans">
+          trans
+        </div>
+      </div>
+      <div class="grid-x medium-margin-y">
+        <div class="bold cell small-12">
+          Secondary
+        </div>
+        <div class="cell small-2 color-example bg-secondary-lighter">
+          lighter
+        </div>
+        <div class="cell small-2 color-example bg-secondary-light">
+          light
+        </div>
+        <div class="cell small-2 color-example bg-secondary-base">
+          base
+        </div>
+        <div class="cell small-2 color-example bg-secondary-dark">
+          dark
+        </div>
+        <div class="cell small-2 color-example bg-secondary-darker">
+          darker
+        </div>
+        <div class="cell small-2 color-example bg-secondary-trans">
+          trans
+        </div>
+      </div>
+      <div class="grid-x medium-margin-y">
+        <div class="bold cell small-12">
+          Tertiary
+        </div>
+        <div class="cell small-2 color-example bg-tertiary-lighter">
+          lighter
+        </div>
+        <div class="cell small-2 color-example bg-tertiary-light">
+          light
+        </div>
+        <div class="cell small-2 color-example bg-tertiary-base">
+          base
+        </div>
+        <div class="cell small-2 color-example bg-tertiary-dark">
+          dark
+        </div>
+        <div class="cell small-2 color-example bg-tertiary-darker">
+          darker
+        </div>
+        <div class="cell small-2 color-example bg-tertiary-trans">
+          trans
+        </div>
+      </div>
+      <div class="grid-x medium-margin-y">
+        <div class="bold cell small-12">
+          Accent
+        </div>
+        <div class="cell small-2 color-example bg-accent-lighter">
+          lighter
+        </div>
+        <div class="cell small-2 color-example bg-accent-light">
+          light
+        </div>
+        <div class="cell small-2 color-example bg-accent-base">
+          base
+        </div>
+        <div class="cell small-2 color-example bg-accent-dark">
+          dark
+        </div>
+        <div class="cell small-2 color-example bg-accent-darker">
+          darker
+        </div>
+        <div class="cell small-2 color-example bg-accent-trans">
+          trans
+        </div>
+      </div>
+      <div class="grid-x medium-margin-y">
+        <div class="bold cell small-12">
+          Success
+        </div>
+        <div class="cell small-2 color-example bg-success-lighter">
+          lighter
+        </div>
+        <div class="cell small-2 color-example bg-success-light">
+          light
+        </div>
+        <div class="cell small-2 color-example bg-success-base">
+          base
+        </div>
+        <div class="cell small-2 color-example bg-success-dark">
+          dark
+        </div>
+        <div class="cell small-2 color-example bg-success-darker">
+          darker
+        </div>
+        <div class="cell small-2 color-example bg-success-trans">
+          trans
+        </div>
+      </div>
+      <div class="grid-x medium-margin-y">
+        <div class="bold cell small-12">
+          Warning
+        </div>
+        <div class="cell small-2 color-example bg-warning-lighter">
+          lighter
+        </div>
+        <div class="cell small-2 color-example bg-warning-light">
+          light
+        </div>
+        <div class="cell small-2 color-example bg-warning-base">base</div>
+        <div class="cell small-2 color-example bg-warning-dark">dark</div>
+        <div class="cell small-2 color-example bg-warning-darker">
+          darker
+        </div>
+        <div class="cell small-2 color-example bg-warning-trans">
+          trans
+        </div>
+      </div>
+      <div class="grid-x medium-margin-y">
+        <div class="bold cell small-12">
+          Danger
+        </div>
+        <div class="cell small-2 color-example bg-danger-lighter">
+          lighter
+        </div>
+        <div class="cell small-2 color-example bg-danger-light">
+          light
+        </div>
+        <div class="cell small-2 color-example bg-danger-base">
+          base
+        </div>
+        <div class="cell small-2 color-example bg-danger-dark">
+          dark
+        </div>
+        <div class="cell small-2 color-example bg-danger-darker">
+          darker
+        </div>
+        <div class="cell small-2 color-example bg-danger-trans">
+          trans
+        </div>
+      </div>
+      <div class="grid-x medium-margin-y">
+        <div class="bold cell small-12">
+          Info
+        </div>
+        <div class="cell small-2 color-example bg-info-lighter">
+          lighter
+        </div>
+        <div class="cell small-2 color-example bg-info-light">light</div>
+        <div class="cell small-2 color-example bg-info-base">
+          base
+        </div>
+        <div class="cell small-2 color-example bg-info-dark">
+          dark
+        </div>
+        <div class="cell small-2 color-example bg-info-darker">
+          darker
+        </div>
+        <div class="cell small-2 color-example bg-info-trans">trans</div>
+      </div>
+      <div class="grid-x medium-margin-y">
+        <div class="bold cell small-12">
+          Neutral
+        </div>
+        <div class="cell small-2 color-example bg-neutral-lighter">
+          lighter
+        </div>
+        <div class="cell small-2 color-example bg-neutral-light">
+          light
+        </div>
+        <div class="cell small-2 color-example bg-neutral-base">
+          base
+        </div>
+        <div class="cell small-2 color-example bg-neutral-dark">
+          dark
+        </div>
+        <div class="cell small-2 color-example bg-neutral-darker">
+          darker
+        </div>
+        <div class="cell small-2 color-example bg-neutral-trans">
+          trans
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
