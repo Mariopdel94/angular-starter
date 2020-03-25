@@ -1,8 +1,41 @@
+$input-min-height: 2.75rem;
+$input-icon-padding: 2rem;
+
 label {
   font-size: 0.9rem;
   line-height: 1;
   font-weight: 600;
   color: color(neutral, lighter);
+}
+
+@mixin icon-input-field() {
+  position: absolute;
+  bottom: calc(#{$input-min-height} / 2);
+  font-size: 1.25rem;
+  transform: translate(0, 50%);
+  color: color(neutral, light);
+}
+
+.form-field {
+  position: relative;
+
+  .prefix-icon {
+    @include icon-input-field();
+    left: 0.5rem;
+
+    + input {
+      padding-left: $input-icon-padding !important;
+    }
+  }
+
+  .suffix-icon {
+    @include icon-input-field();
+    right: 0.5rem;
+
+    + input {
+      padding-right: $input-icon-padding !important;
+    }
+  }
 }
 
 input,
@@ -15,7 +48,7 @@ textarea {
   box-shadow: none;
   color: color(neutral, base);
   font-size: 1rem !important;
-  min-height: 2.75rem;
+  min-height: $input-min-height;
   outline: none;
   padding: 0 1rem 0 0.5rem;
   transition: all 0.3s ease;
