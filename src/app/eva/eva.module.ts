@@ -13,10 +13,10 @@ import { SnackbarGuideComponent } from './styleguide/components/snackbar-guide/s
 import { SpinnerGuideComponent } from './styleguide/components/spinner-guide/spinner-guide.component';
 import { DatepickerGuideComponent } from './styleguide/components/datepicker-guide/datepicker-guide.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
-import { MatNativeDateModule } from '@angular/material/core';
 import { EvaBottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
 import { BottomSheetHeaderComponent } from './bottom-sheet/components/bottom-sheet-header/bottom-sheet-header.component';
 import { BottomSheetGuideComponent } from './styleguide/components/bottom-sheet-guide/bottom-sheet-guide.component';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 @NgModule({
   declarations: [
@@ -39,7 +39,7 @@ import { BottomSheetGuideComponent } from './styleguide/components/bottom-sheet-
     FormsModule,
     MatSnackBarModule,
     MatDatepickerModule,
-    MatNativeDateModule,
+    MatMomentDateModule,
   ],
 })
 export class EvaModule {}
