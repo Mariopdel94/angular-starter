@@ -11,6 +11,12 @@ import { FormsGuideComponent } from './styleguide/components/forms-guide/forms-g
 import { ResolutionsGuideComponent } from './styleguide/components/resolutions-guide/resolutions-guide.component';
 import { SnackbarGuideComponent } from './styleguide/components/snackbar-guide/snackbar-guide.component';
 import { SpinnerGuideComponent } from './styleguide/components/spinner-guide/spinner-guide.component';
+import { DatepickerGuideComponent } from './styleguide/components/datepicker-guide/datepicker-guide.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { EvaBottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
+import { BottomSheetHeaderComponent } from './bottom-sheet/components/bottom-sheet-header/bottom-sheet-header.component';
+import { BottomSheetGuideComponent } from './styleguide/components/bottom-sheet-guide/bottom-sheet-guide.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +28,18 @@ import { SpinnerGuideComponent } from './styleguide/components/spinner-guide/spi
     ResolutionsGuideComponent,
     SnackbarGuideComponent,
     SpinnerGuideComponent,
+    DatepickerGuideComponent,
+    EvaBottomSheetComponent,
+    BottomSheetHeaderComponent,
+    BottomSheetGuideComponent,
   ],
-  imports: [CommonModule, EvaRoutingModule, FormsModule, MatSnackBarModule],
+  imports: [
+    CommonModule,
+    EvaRoutingModule,
+    FormsModule,
+    MatSnackBarModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+  ],
 })
 export class EvaModule {}

@@ -1,0 +1,11 @@
+<div id="eva-bottom-sheet">
+  <eva-bottom-sheet-header></eva-bottom-sheet-header>
+  <div
+    class="bottom-sheet-content"
+    [@toggleHeight]="
+      evaBottomSheetService.isBottomSheetMinimized ? 'closed' : 'open'
+    "
+  >
+    <div #viewContainerRef></div>
+  </div>
+</div>

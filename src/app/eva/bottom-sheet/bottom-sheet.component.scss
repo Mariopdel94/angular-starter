@@ -1,0 +1,12 @@
+#eva-bottom-sheet {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  overflow: hidden;
+}
+
+.bottom-sheet-content {
+  transition: all 0.5s ease;
+  max-height: 35rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

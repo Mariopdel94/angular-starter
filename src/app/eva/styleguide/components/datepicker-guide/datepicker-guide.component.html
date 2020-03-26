@@ -1,0 +1,32 @@
+<div class="card margin-y">
+  <div class="card-title">
+    Material Datepicker
+  </div>
+  <div class="card-subtitle">
+    <a
+      href="https://material.angular.io/components/datepicker/overview"
+      target="_blank"
+    >
+      Datepicker Input
+    </a>
+  </div>
+  <div class="card-content">
+    Eva overrides the default Angular Material Datepicker component styles using
+    the color palette on your settings file. The usage is the same as the
+    material component.
+
+    <div class="center-xy grid-x">
+      <div class="cell small-12 margin-y form-field">
+        <i class="prefix-icon material-icons">date_range</i>
+        <input
+          placeholder="Choose a date"
+          (keydown)="$event.preventDefault()"
+          [matDatepicker]="myDatepicker"
+          (click)="myDatepicker.open()"
+          (focus)="myDatepicker.open()"
+        />
+        <mat-datepicker #myDatepicker></mat-datepicker>
+      </div>
+    </div>
+  </div>
+</div>
