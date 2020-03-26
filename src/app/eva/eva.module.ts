@@ -14,6 +14,9 @@ import { SpinnerGuideComponent } from './styleguide/components/spinner-guide/spi
 import { DatepickerGuideComponent } from './styleguide/components/datepicker-guide/datepicker-guide.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
+import { EvaBottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
+import { BottomSheetHeaderComponent } from './bottom-sheet/components/bottom-sheet-header/bottom-sheet-header.component';
+import { BottomSheetGuideComponent } from './styleguide/components/bottom-sheet-guide/bottom-sheet-guide.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     SnackbarGuideComponent,
     SpinnerGuideComponent,
     DatepickerGuideComponent,
+    EvaBottomSheetComponent,
+    BottomSheetHeaderComponent,
+    BottomSheetGuideComponent,
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,29 @@
+<div
+  class="header-container"
+  (click)="
+    evaBottomSheetService.isBottomSheetMinimized = !evaBottomSheetService.isBottomSheetMinimized
+  "
+>
+  <div class="header-title">
+    {{ evaBottomSheetService?.bottomSheetData?.title || '' }}
+  </div>
+  <div class="header-options" (click)="$event.stopPropagation()">
+    <i
+      class="material-icons minimize-icon"
+      (click)="evaBottomSheetService.isBottomSheetMinimized = true"
+      *ngIf="!evaBottomSheetService.isBottomSheetMinimized"
+    >
+      expand_more
+    </i>
+    <i
+      class="material-icons minimize-icon"
+      (click)="evaBottomSheetService.isBottomSheetMinimized = false"
+      *ngIf="evaBottomSheetService.isBottomSheetMinimized"
+    >
+      expand_less
+    </i>
+    <i class="material-icons" (click)="close()">
+      close
+    </i>
+  </div>
+</div>
