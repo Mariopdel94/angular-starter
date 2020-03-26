@@ -55,14 +55,16 @@ export class EvaBottomSheetComponent implements OnInit {
   }
 
   private _loadComponent() {
-    const componentFactory = this._componentFactoryResolver.resolveComponentFactory(
-      this.evaBottomSheetService.bottomSheetData.component
-    );
-    if (componentFactory) {
-      this.viewContainerRef.clear();
-      const componentRef = this.viewContainerRef.createComponent(
-        componentFactory
+    if (this.evaBottomSheetService.bottomSheetData) {
+      const componentFactory = this._componentFactoryResolver.resolveComponentFactory(
+        this.evaBottomSheetService.bottomSheetData.component
       );
+      if (componentFactory) {
+        this.viewContainerRef.clear();
+        const componentRef = this.viewContainerRef.createComponent(
+          componentFactory
+        );
+      }
     }
   }
 }
