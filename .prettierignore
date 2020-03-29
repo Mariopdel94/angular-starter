@@ -1,0 +1,3 @@
+# Ignore Foundation Grid Styles
+# Formatting it breaks the `cell` class
+/src/styles/grid

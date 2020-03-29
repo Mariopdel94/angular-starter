@@ -14,7 +14,12 @@
       <li>resolutions-between($min, $max)</li>
     </ul>
 
-    Use these mixins under any SCSS rule and use your own rules.
+    <p>Use these mixins under any SCSS rule and use your own rules.</p>
+
+    <b>Note:</b>
+    to use these mixins, or any other SCSS funtionality of Eva you need to
+    import the eva-for-scss.scss file. It will not add any bundle size since it
+    includes only sass code without any css classes.
 
     <pre class="show-for-medium">
 .some-class &#123; padding: 0.5rem; @include resolutions-above(resolution(large)) &#123; padding: 1rem &#125;&#125;;</pre
