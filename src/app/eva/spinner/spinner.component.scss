@@ -1,5 +1,3 @@
-@import '../../../styles/theme/index.scss';
-
 .spinner {
   width: 40px;
   height: 40px;
@@ -16,7 +14,6 @@
   position: absolute;
   top: 0;
   left: 0;
-
   -webkit-animation: sk-bounce 2s infinite ease-in-out;
   animation: sk-bounce 2s infinite ease-in-out;
 }

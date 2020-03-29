@@ -1,4 +1,4 @@
-/* Generate all the color classes (see css file output) */
+/* Generate all the color classes */
 @each $code, $color in $colors {
   @if type-of($color) == 'map' {
     @each $colorVariant, $colorCode in $color {
