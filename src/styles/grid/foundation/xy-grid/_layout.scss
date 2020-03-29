@@ -28,18 +28,9 @@
   $vertical: false,
   $output: (base size gutters)
 ) {
-  $size: percentage(1 / $n);
+  $size: percentage(1/$n);
 
   & > #{$selector} {
-    @include xy-cell(
-      $size,
-      $gutter-output,
-      $gutters,
-      $gutter-type,
-      $gutter-position,
-      $breakpoint,
-      $vertical,
-      $output
-    );
+    @include xy-cell($size, $gutter-output, $gutters, $gutter-type, $gutter-position, $breakpoint, $vertical, $output);
   }
 }
