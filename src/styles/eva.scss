@@ -1,0 +1,33 @@
+/**
+ * Foundation XY Grid
+ * Version 6.6.2
+ * https://get.foundation
+ * Licensed under MIT Open Source
+ */
+@import '~eva-css/styles/grid/foundation/foundation.scss';
+
+/**
+  * Eva CSS
+  * Version 0.1.0
+  * https://github.com/Mariopdel94/eva-css
+ */
+
+/* -- Import your own `settings` here or use the default settings through -- */
+@import '_settings.scss';
+
+/* -- Eva SCSS Files. Configurations, Mixins, Functions, etc. -- */
+@import '~eva-css/styles/eva/_responsive.scss';
+@import '~eva-css/styles/eva/_colors.scss';
+@import '~eva-css/styles/eva/_buttons.scss';
+
+/* -- Eva Classes -- */
+@import '~eva-css/styles/eva/classes/_color-classes.scss';
+@import '~eva-css/styles/eva/classes/_button-classes.scss';
+@import '~eva-css/styles/eva/classes/_cards.scss';
+@import '~eva-css/styles/eva/classes/_flex.scss';
+@import '~eva-css/styles/eva/classes/_forms.scss';
+@import '~eva-css/styles/eva/classes/_snackbar.scss';
+@import '~eva-css/styles/eva/classes/_datepicker.scss';
+@import '~eva-css/styles/eva/classes/_spacing.scss';
+@import '~eva-css/styles/eva/classes/_text.scss';
+@import '~eva-css/styles/eva/classes/_common.scss';
