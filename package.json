@@ -31,7 +31,7 @@
     "@angular/platform-browser-dynamic": "9.1.4",
     "@angular/router": "9.1.4",
     "eva-css": "0.1.6",
-    "moment": "2.25.2",
+    "moment": "2.25.3",
     "rxjs": "6.5.5",
     "tslib": "1.11.1",
     "zone.js": "0.10.3"
